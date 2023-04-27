@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hNp8OCxclEvwcFOpQzjelLbXt+S3IfElucdslhvuE0J8SUbieAP5I9RBlekj3bL6RkqpkZEFAxgijXFDTEfDOQ==",
+  "dgSpecHash": "0MI7onVN7IEu9PULG8jMExQRlWk1vSO2XfLSA8jTaOKw9ENL+A9zjtWZMN8UteTPeOxUDVTdtZPxTxENt18myA==",
   "success": true,
-  "projectFilePath": "/Users/antoninanovak/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj",
+  "projectFilePath": "/Users/vladshcherbyna/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

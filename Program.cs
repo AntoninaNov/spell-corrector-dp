@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 // Preparation
-List<string> wordsList = new List<string>(File.ReadAllLines("/Users/antoninanovak/RiderProjects/spell-corrector-dp/words_list.txt"));
+List<string> wordsList = new List<string>(File.ReadAllLines("/Users/vladshcherbyna/RiderProjects/spell-corrector-dp/words_list.txt"));
 
 Console.WriteLine("Enter a sentence:");
 string? input = Console.ReadLine();
@@ -19,7 +19,7 @@ PrintMisspelledWords(misspelledWords);
 
 static List<string> SplitWords(string? input)
 {
-    var withoutPunctuation = new string(input.Where(c => !char.IsPunctuation(c)).ToArray());
+    var withoutPunctuation = new string(input.Where(c => !char.IsPunctuation(c) || c == '\'').ToArray());
     
     var words = withoutPunctuation.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
     
