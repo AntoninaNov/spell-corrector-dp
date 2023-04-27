@@ -1,0 +1,15 @@
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/spell-corrector-dp.csproj.AssemblyReference.cache
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/spell-corrector-dp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/spell-corrector-dp.AssemblyInfoInputs.cache
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/spell-corrector-dp.AssemblyInfo.cs
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/spell-corrector-dp.csproj.CoreCompileInputs.cache
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/bin/Debug/net7.0/spell-corrector-dp
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/bin/Debug/net7.0/spell-corrector-dp.deps.json
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/bin/Debug/net7.0/spell-corrector-dp.runtimeconfig.json
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/bin/Debug/net7.0/spell-corrector-dp.dll
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/bin/Debug/net7.0/spell-corrector-dp.pdb
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/spell-corrector-dp.dll
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/refint/spell-corrector-dp.dll
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/spell-corrector-dp.pdb
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/spell-corrector-dp.genruntimeconfig.cache
+/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/Debug/net7.0/ref/spell-corrector-dp.dll

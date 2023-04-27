@@ -1,14 +1,21 @@
-﻿//using System;
-//using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 // Preparation
-List<string> wordsList = new List<string>(File.ReadAllLines("words_list.txt"));
+List<string> wordsList = new List<string>(File.ReadAllLines("/Users/antoninanovak/RiderProjects/spell-corrector-dp/words_list.txt"));
 
 Console.WriteLine("Enter a sentence:");
 string? input = Console.ReadLine();
 
 List<string> words = SplitWords(input);
-//List<string> misspelledWords = FindMisspelledWords(words, wordsList);
+foreach (string word in words)
+{
+    Console.WriteLine(word);
+}
+
+List<string> misspelledWords = FindMisspelledWords(words, wordsList);
+
+PrintMisspelledWords(misspelledWords);
 
 static List<string> SplitWords(string? input)
 {
@@ -20,7 +27,28 @@ static List<string> SplitWords(string? input)
     return wordsList;
 }
 
-//static List<string> FindMisspelledWords(List<string> words, List<string> wordsList)
+static List<string> FindMisspelledWords(List<string> words, List<string> wordsList)
 {
-    // Check each word for its presence in the wordsList and return a list of misspelled words
+    List<string> misspelledWords = new List<string>();
+
+    foreach (string word in words)
+    {
+        if (!wordsList.Contains(word.ToLower()))
+        {
+            misspelledWords.Add(word);
+        }
+    }
+    return misspelledWords;
+}
+
+static void PrintMisspelledWords(List<string> misspelledWords)
+{
+    if (misspelledWords.Count > 0)
+    {
+        Console.WriteLine($"Looks like you have typos in the next words: {string.Join(", ", misspelledWords)}");
+    }
+    else
+    {
+        Console.WriteLine("No typos found.");
+    }
 }

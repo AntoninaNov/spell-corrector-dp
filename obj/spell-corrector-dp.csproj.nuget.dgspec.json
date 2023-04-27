@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vladshcherbyna/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj": {}
+    "/Users/antoninanovak/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj": {}
   },
   "projects": {
-    "/Users/vladshcherbyna/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj": {
+    "/Users/antoninanovak/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vladshcherbyna/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj",
+        "projectUniqueName": "/Users/antoninanovak/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj",
         "projectName": "spell-corrector-dp",
-        "projectPath": "/Users/vladshcherbyna/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj",
-        "packagesPath": "/Users/vladshcherbyna/.nuget/packages/",
-        "outputPath": "/Users/vladshcherbyna/RiderProjects/spell-corrector-dp/obj/",
+        "projectPath": "/Users/antoninanovak/RiderProjects/spell-corrector-dp/spell-corrector-dp.csproj",
+        "packagesPath": "/Users/antoninanovak/.nuget/packages/",
+        "outputPath": "/Users/antoninanovak/RiderProjects/spell-corrector-dp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vladshcherbyna/.nuget/NuGet/NuGet.Config"
+          "/Users/antoninanovak/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/vladshcherbyna/.dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }
