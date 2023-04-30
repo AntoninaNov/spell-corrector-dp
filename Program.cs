@@ -19,21 +19,29 @@ PrintMisspelledWords(misspelledWords);
 
 static List<string> SplitWords(string? input)
 {
-    var withoutPunctuation = new string(input.Where(c => !char.IsPunctuation(c)).ToArray());
+    var withoutPunctuation = new string(input.Where(c => !char.IsPunctuation(c) || c == '\'').ToArray());
     
-    var words = withoutPunctuation.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+    var words = withoutPunctuation.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
     
     var wordsList = words.ToList();
     return wordsList;
 }
 
+// до кутових + 1
+// до іншого + 0,якщо кутові однакові
+// + 1 якщо кутові різні
+
+//eфективний метод, не будуючи матрицю
+
+
+
 static List<string> FindMisspelledWords(List<string> words, List<string> wordsList)
 {
     List<string> misspelledWords = new List<string>();
-
+    
     foreach (string word in words)
     {
-        if (!wordsList.Contains(word.ToLower()))
+        if (!wordsList.Contains(word) && !wordsList.Contains(word.ToLower()))
         {
             misspelledWords.Add(word);
         }
