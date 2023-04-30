@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 // Preparation
-List<string> wordsList = new List<string>(File.ReadAllLines("/Users/antoninanovak/RiderProjects/spell-corrector-dp/words_list.txt"));
+List<string> wordsList = new List<string>(File.ReadAllLines("/Users/vladshcherbyna/RiderProjects/spell-corrector-dp/words_list.txt"));
 
 Console.WriteLine("Enter a sentence:");
 string? input = Console.ReadLine();
