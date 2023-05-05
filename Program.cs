@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 
 // Preparation
-List<string> wordsList = new List<string>(File.ReadAllLines("/Users/antoninanovak/RiderProjects/spell-corrector-dp/words_list.txt"));
-// /Users/vladshcherbyna/RiderProjects/spell-corrector-dp/words_list.txt
+List<string> wordsList = new List<string>(File.ReadAllLines("/Users/vladshcherbyna/RiderProjects/spell-corrector-dp/words_list.txt"));
+// /Users/vladshcherbyna/RiderProjects/spell-corrector-dp/words_list.txt//////antoninanovak
 Console.WriteLine("Enter a sentence:");
 string? input = Console.ReadLine();
 
@@ -16,6 +16,12 @@ foreach (string word in words)
 List<string> misspelledWords = FindMisspelledWords(words, wordsList);
 
 PrintMisspelledWords(misspelledWords);
+
+foreach (string misspelledWord in misspelledWords)
+{
+    List<string> suggestions = FindBestWords(misspelledWord, wordsList);
+    Console.WriteLine($"For the word '{misspelledWord}', here are some suggestions: {string.Join(", ", suggestions)}");
+}
 
 foreach (string misspelledWord in misspelledWords)
 {
@@ -59,6 +65,80 @@ static void PrintMisspelledWords(List<string> misspelledWords)
         Console.WriteLine("No typos found.");
     }
 }
+
+static string LongestCommonSubsequence(string firstWord, string secondWord)
+{
+    int[,] lcsMatrix = new int[firstWord.Length + 1, secondWord.Length + 1];
+
+    for (int i = 0; i <= firstWord.Length; i++)
+    {
+        for (int j = 0; j <= secondWord.Length; j++)
+        {
+            if (i == 0 || j == 0)
+            {
+                lcsMatrix[i, j] = 0;
+            }
+            else if (firstWord[i - 1] == secondWord[j - 1])
+            {
+                lcsMatrix[i, j] = lcsMatrix[i - 1, j - 1] + 1;
+            }
+            else
+            {
+                lcsMatrix[i, j] = Math.Max(lcsMatrix[i - 1, j], lcsMatrix[i, j - 1]);
+            }
+        }
+    }
+
+    int lcsLength = lcsMatrix[firstWord.Length, secondWord.Length];
+    char[] lcsChars = new char[lcsLength];
+    int index = lcsLength - 1;
+
+    int m = firstWord.Length, n = secondWord.Length;
+    while (m > 0 && n > 0)
+    {
+        if (firstWord[m - 1] == secondWord[n - 1])
+        {
+            lcsChars[index] = firstWord[m - 1];
+            m--;
+            n--;
+            index--;
+        }
+        else if (lcsMatrix[m - 1, n] > lcsMatrix[m, n - 1])
+        {
+            m--;
+        }
+        else
+        {
+            n--;
+        }
+    }
+
+    return new string(lcsChars);
+}
+
+static List<string> FindBestWords(string word, List<string> wordsList)
+{
+    List<string> bestWords = new List<string>();
+    Dictionary<string, int> wordLCS = new Dictionary<string, int>();
+
+    foreach (string w in wordsList)
+    {
+        int lcsLength = LongestCommonSubsequence(word, w).Length;
+        wordLCS[w] = lcsLength;
+    }
+
+    var orderedLCS = wordLCS.OrderByDescending(l => l.Value).Take(5);
+
+    foreach (var item in orderedLCS)
+    {
+        bestWords.Add(item.Key);
+    }
+
+    return bestWords;
+}
+
+
+
 
 // до кутових + 1
 // до іншого + 0,якщо кутові однакові
